@@ -1,0 +1,13 @@
+{
+  "name": "lichesspuzzleclock",
+  "version": "1.0",
+  "description": "A puzzle clock/timer for Lichess puzzles (Violentmonkey script)",
+  "author": "Rafael Nájera <rafael@najera.ca>",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "jquery": "^3.6.0"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.5.5"
+  }
+}
