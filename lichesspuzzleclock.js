@@ -28,6 +28,24 @@ let autoFailOnTimeout = getUserSetting('autoFailOnTimeOut', false)
 let autoStart = autoStartMode !== 'no'
 
 
+const darkColorScheme = {
+    countingUp: 'silver',
+    countingDown: 'yellow',
+    puzzleEnd: 'gray',
+    timeOut: 'red',
+    enabledButton: 'rgb(186, 186, 186)',
+    disabledButton: 'rgb(96,96,96)'
+}
+
+const lightColorScheme = {
+    countingUp: '#424242',
+    countingDown: '#e36920',
+    puzzleEnd: 'gray',
+    timeOut: 'red',
+    enabledButton: 'black',
+    disabledButton: 'rgb(200,200,200)'
+}
+
 
 // -----------------------------------------------
 // Script body
@@ -50,6 +68,8 @@ let startingTimestamp = -1
 let timeout
 let state
 
+let colorScheme
+
 let buttonBlitz
 let buttonRapid
 let buttonClassic
@@ -58,9 +78,11 @@ let clockElement
 let autoFailCheckbox
 let autoSelect
 
-GM_addStyle(getStyles())
+
 
 $( () => {
+    colorScheme = $('body').hasClass('dark') ? darkColorScheme : lightColorScheme
+    GM_addStyle(getStyles())
     $('#top').after(getHtml())
     buttonBlitz = $(`div.puzzleClock button.blitz`)
     buttonRapid = $(`div.puzzleClock button.rapid`)
@@ -350,10 +372,10 @@ function getHtml() {
         </div>
         <div class="clock">--:--</div>
         <div class="tb">
-            <div class="tb-group">
+            <div class="tb-group withTopPadding">
                  <input title="Auto Fail Puzzle on Timeout" type="checkbox" ${autoFailOnTimeout ? "checked" : ''} class="autoFailCheckbox"/> <label>AF</label>
             </div>
-            <div class="tb-group">
+            <div class="tb-group withTopPadding">
                 <label>Auto:</label>
                 <select title="Auto Start" class="autoSelect" >
                    <option title="Do no start automatically" value="no" ${autoStartMode === 'no' ? 'selected' : ''}>no</option>
@@ -391,8 +413,8 @@ div.puzzleClock {
 }
 
 .puzzleClock button {
-    color: rgb(186, 186, 186);
-    border: 1px solid rgb(186, 186, 186);
+    color: ${colorScheme.enabledButton};
+    border: 1px solid ${colorScheme.enabledButton};
     border-radius: 3px;
     margin: 5px;
     background: none;
@@ -404,8 +426,8 @@ div.puzzleClock {
 }
 
 .puzzleClock button:disabled {
-    color: rgb(96, 96, 96);
-    border: 1px solid rgb(96, 96, 96);
+    color: ${colorScheme.disabledButton};
+    border: 1px solid ${colorScheme.disabledButton};
 }
 
 
@@ -416,22 +438,26 @@ div.puzzleClock {
 }
 
 .puzzleClock div.clock.${classCountingDown} {
-    color: yellow;
+    color: ${colorScheme.countingDown};
 }
 
 .puzzleClock div.clock.${classCountingUp} {
-    color: silver;
+    color: ${colorScheme.countingUp};
 }
 
 .puzzleClock div.clock.${classPuzzleEnd} {
-    color: gray;
+    color: ${colorScheme.puzzleEnd};
 }
 
 .puzzleClock div.clock.${classTimeout} {
-    color: red
+    color: ${colorScheme.timeOut};
 }
 
 .puzzleClock div.clock small {
     font-size: 0.5em;
-}`
+}
+.withTopPadding {
+    padding-top: 4px;
+}
+`
 }
