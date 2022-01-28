@@ -55,7 +55,7 @@ Simply solve each puzzle normally, trying to see the whole solution before makin
 your moves. If you could not solve it, study the solution, go over it 2-3 times, 
 visualize it in your head 2-3 more times and move on to the next. It is said
 that finding and studying 3 of these failed puzzles per day will slowly build your
-arsenal of tactical patterns very efficiently along a 1-2 year period. A 30sec timer is 
+arsenal of tactical patterns very efficiently over a 1-2 year period. A 30sec timer is 
 recommended of this purpose. David Pruess describes this technique in his YouTube video
 [_How to Learn Tactics 1_](https://youtu.be/Mvkuji08dMc). For the same ideas explained in German, 
 see David Riemay's (a.k.a. Schachpanda) [_So lernt ihr Schach Taktik_](https://youtu.be/_25i84yD6Uc) video. 
