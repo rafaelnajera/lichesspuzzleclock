@@ -3,13 +3,15 @@ A Violentmonkey user script that adds a clock/timer to lichess puzzles.
 
 ### Credits
 
-Based on Hugo Platzer's script "Lichess timed puzzles"
-(https://greasyfork.org/en/scripts/380560-lichess-timed-puzzles)
+Based on Hugo Platzer's script [Lichess timed puzzles](https://greasyfork.org/en/scripts/380560-lichess-timed-puzzles)
 
 
 ## Installation
-Create a new user script in Violentmonkey and replace its contents with 
-the contents of `lichesspuzzleclock.js`
+
+Install from URL in Violentmonkey:  https://rafaelnajera.github.io/lichesspuzzleclock/lichesspuzzleclock.js
+
+Or, create a new user script in Violentmonkey and replace its contents with 
+the contents of [lichesspuzzleclock.js](lichesspuzzleclock.js)
 
 
 ## Usage

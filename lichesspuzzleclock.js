@@ -1,6 +1,7 @@
 // ==UserScript==
 // @name     LichessPuzzleClock
 // @version  1.0
+// @downloadURL https://rafaelnajera.github.io/lichesspuzzleclock/lichesspuzzleclock.js
 // @match https://lichess.org/training*
 // @exclude-match https://lichess.org/training/history
 // @exclude-match https://lichess.org/training/themes
