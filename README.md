@@ -3,16 +3,20 @@ A Violentmonkey user script that adds a clock/timer to lichess puzzles.
 
 ## Installation
 
-Install from URL in Violentmonkey:  
+Install and enable the [Violentmonkey](https://violentmonkey.github.io/) extension in your browser. It
+works in Firefox, Chrome, and many others. 
+
+Go to Violentmonkey's settings and click on the plus sign icon to install a new 
+script. Choose "Install from URL" and enter the following:
 
 `https://rafaelnajera.github.io/lichesspuzzleclock/lichesspuzzleclock.js`
 
-Or, create a new user script in Violentmonkey and replace its contents with 
+Alternatively, create a new script in Violentmonkey and replace its contents with 
 the contents of [lichesspuzzleclock.js](lichesspuzzleclock.js)
 
 
 ## Usage
-The clock/timer will appear on top of the chess board. 
+The clock/timer will appear on top of the chess board in any Lichess puzzle page.
 
 ![toolbar](images/toolbar.png)
 
