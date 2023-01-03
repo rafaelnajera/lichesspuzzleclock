@@ -357,13 +357,14 @@ function makePuzzleFail() {
     }
 }
 
+
 function getHtml() {
     return `<div class="puzzleClock">
         <div class="tb">
             <div class="tb-group">
-                <button class="blitz" title="Blitz mode, ${timeOutBlitz}s">B</button>
-                <button class="rapid" title="Rapid mode, ${timeOutRapid}s">R</button> 
-                <button class="classic" title="Classic mode, ${timeOutClassic}s">C</button>
+                <button class="blitz" title="Blitz Timer, ${timeOutBlitz}s">B</button>
+                <button class="rapid" title="Rapid Timer, ${timeOutRapid}s">R</button> 
+                <button class="classic" title="Classic Timer, ${timeOutClassic}s">C</button>
             </div>
             <div class="tb-group">
                 <button class="infinite" title="No time limit">&infin;</button>
